@@ -1,0 +1,22 @@
+#!/bin/bash
+
+mkdir -p /home/backup
+cd /home/backup
+
+KAM=`date "+%d.%m._%a_%H:%M:%S"`
+SMAZ=`date --date "3 days ago" "+%d.%m._%a_%H:*"`
+
+mkdir $KAM;
+databases=`echo show databases | mysql --skip-column-names`
+
+for db in $databases; do 
+  mkdir -p $KAM/$t
+  tables=`echo show tables | mysql -D $db --skip-column-names`
+  for t in $tables; do
+     mysqldump $db $t > $KAM/$db/$t.sql
+  done
+done
+
+
+
+rm -rf $SMAZ
