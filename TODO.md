@@ -1,19 +1,8 @@
 TODO
 ----
 
-
-- změna root hesla a debian-sys-maint.
-- stažení tls certu na slave
-
-- apache2/mpm-itk + adminer + tls
-
 - nahrání reálných dat a mysqltuner
 - nahrání reálných dotazů z prod. serveru a replay
-
-- minimální dohled
-- lokální zálohování mysqldumpem
-
-- dokumentace
 
 
 DONE
@@ -33,5 +22,18 @@ DONE
   - innodb file per table
   - auto_increment offset
 
-- vytvoření ca a tls certifikátu na masteru
+  - vytvoření ca a tls certifikátu na masteru
 
+  - tls na slave
+
+  - rozjetí replikace
+
+  - změna root hesla a debian-sys-maint.
+
+  - apache2/mpm-itk + adminer + tls
+
+  - lokální zálohování mysqldumpem
+
+  - minimální dohled
+
+  - dokumentace
